@@ -1,9 +1,9 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const n = 17;
 const w = window.innerWidth;
 const h = window.innerHeight;
+const n = w > 600 ? 17 : 7;
 const dw = Math.floor(window.innerWidth / (2 * n + 1));
 const margin = (w - dw * (2 * n + 1)) / 2;
 

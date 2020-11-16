@@ -1,3 +1,3 @@
 # hy-chou.github.io
 
-- [walk](https://hy-chou.github.io/index.html)
+- [walk](https://hy-chou.github.io/walk.html)
