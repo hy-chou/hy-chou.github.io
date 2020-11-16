@@ -65,12 +65,12 @@ ctx.fillRect(0, 0, w, h);
 
 let renderInterval = setInterval(motion, 1000 / 12);
 
-let palse = false;
+let pause = false;
 canvas.onclick = () => {
-  if (palse) {
+  if (pause) {
     renderInterval = setInterval(motion, 1000 / 12);
   } else {
     clearInterval(renderInterval);
   }
-  palse = !palse;
+  pause = !pause;
 };
