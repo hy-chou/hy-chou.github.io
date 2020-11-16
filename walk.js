@@ -56,12 +56,16 @@ function motion() {
   else b = decr(b);
 }
 
+function clearCanvas() {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, w, h);
+}
+
 // Init
 canvas.width = w;
 canvas.height = h;
 
-ctx.fillStyle = "#ffffff";
-ctx.fillRect(0, 0, w, h);
+clearCanvas();
 
 let renderInterval = setInterval(motion, 1000 / 12);
 
@@ -73,4 +77,8 @@ canvas.onclick = () => {
     clearInterval(renderInterval);
   }
   pause = !pause;
+};
+
+canvas.ondblclick = () => {
+  clearCanvas();
 };
