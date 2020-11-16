@@ -10,17 +10,11 @@ const margin = (w - dw * (2 * n + 1)) / 2;
 const pos = [];
 for (let i = 0; i < n; i += 1) pos[i] = (2 * i + 1) * dw;
 for (let i = n; i < 2 * n - 1; i += 1) pos[i] = pos[2 * n - i - 2];
-let x = 0;
 
 const dc = 16;
 let r = 128;
 let g = 128;
 let b = 128;
-
-canvas.width = w;
-canvas.height = h;
-ctx.fillStyle = "#ffffff";
-ctx.fillRect(0, 0, w, h);
 
 function incr(num) {
   if (num + dc >= 255) return num - dc;
@@ -32,9 +26,13 @@ function decr(num) {
   return num - dc;
 }
 
+let x = 0;
 function render() {
   ctx.save();
   ctx.translate(margin, margin + dw);
+
+  ctx.fillStyle = "white";
+  ctx.fillRect(pos[x] - 1, -1, dw + 2, h - (margin + dw) * 2 + 2);
 
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(pos[x], 0, dw, h - (margin + dw) * 2);
@@ -58,4 +56,21 @@ function motion() {
   else b = decr(b);
 }
 
-setInterval(motion, 1000 / 24);
+// Init
+canvas.width = w;
+canvas.height = h;
+
+ctx.fillStyle = "#ffffff";
+ctx.fillRect(0, 0, w, h);
+
+let renderInterval = setInterval(motion, 1000 / 12);
+
+let palse = false;
+canvas.onclick = () => {
+  if (palse) {
+    renderInterval = setInterval(motion, 1000 / 12);
+  } else {
+    clearInterval(renderInterval);
+  }
+  palse = !palse;
+};
