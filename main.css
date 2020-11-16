@@ -11,9 +11,14 @@ canvas {
 }
 
 h1 {
-  margin: 2rem 2rem 1rem;
+  margin: 10vmin 10vmin 5vmin;
+  font-size: 10vmin;
 }
 
 ul {
-  margin: 0 3rem;
+  margin: 0 16vmin;
+}
+
+li {
+  font-size: 6vmin;
 }
