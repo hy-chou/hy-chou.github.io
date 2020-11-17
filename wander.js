@@ -33,7 +33,7 @@ function render() {
 function motion() {
   render();
 
-  const rd = Math.random();
+  let rd = Math.random();
 
   if (rd < 1 / 6) r = incr(r, dc, 255);
   else if (rd < 2 / 6) r = decr(r, dc);
@@ -42,6 +42,7 @@ function motion() {
   else if (rd < 5 / 6) b = incr(b, dc, 255);
   else b = decr(b, dc);
 
+  rd = Math.random();
   if (rd < 1 / 4) x = incr(x, dl, w - dl);
   else if (rd < 2 / 4) x = decr(x, dl, dl);
   else if (rd < 3 / 4) y = incr(y, dl, h - dl);
