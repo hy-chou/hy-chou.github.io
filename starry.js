@@ -1,3 +1,4 @@
+const { body } = document;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -29,6 +30,7 @@ function clearCanvas() {
 }
 
 // Init
+body.style.backgroundColor = "black";
 canvas.width = w;
 canvas.height = h;
 clearCanvas();
