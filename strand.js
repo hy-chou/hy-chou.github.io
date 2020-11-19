@@ -29,9 +29,9 @@ function render(x0, y0) {
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(x0, y0, dl, dl);
 
-  for (let t = 100; t < 2000; t += 100) {
+  for (let t = 100; t < 2000; t += 50) {
     setTimeout(() => {
-      ctx.fillStyle = "#ffffff3f";
+      ctx.fillStyle = "#ffffff1f";
       ctx.fillRect(x0, y0, dl, dl);
     }, t);
   }
