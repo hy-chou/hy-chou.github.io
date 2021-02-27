@@ -1,3 +1,4 @@
 # [hy-chou](https://hy-chou.github.io/)
 
-## [canvas](https://hy-chou.github.io/canvas/)
+## [Timeline](https://hy-chou.github.io/timeline)
+## [Canvas](https://hy-chou.github.io/canvas)
